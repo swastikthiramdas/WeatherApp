@@ -50,6 +50,6 @@ class MainActivity : AppCompatActivity() {
         var temp = response.getJSONObject("main").getString("temp")
         temp = (((temp).toFloat()- 273.15)).toInt().toString()
         Degre.text= temp+"°C"
-
+        Wind_spped.text = response.getJSONObject("wind").getString("speed")
     }
 }
